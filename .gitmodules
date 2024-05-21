@@ -1,3 +1,7 @@
 [submodule "Encriptador-de-texto"]
 	path = Encriptador-de-texto
 	url = https://github.com/talle5/Encriptador-de-texto
+[submodule "SnakeGame"]
+	path = SnakeGame
+	url = https://github.com/talle5/SnakeGame
+	branch = webassembly
