@@ -5,3 +5,6 @@
 	path = SnakeGame
 	url = https://github.com/talle5/SnakeGame
 	branch = webassembly
+[submodule "artetoca_web"]
+	path = artetoca_web
+	url = https://github.com/talle5/artetoca_web.git
