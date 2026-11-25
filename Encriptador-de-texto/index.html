@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador</title>
+    <link rel="icon" href="assets/page-icon.svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <img src="./assets/alura-logo.svg" alt="logo da alura">
+    </header>
+    <main>
+        <section class="flex" id="input">
+            <textarea class="fullcontent" id="text_input" placeholder="Digite seu texto"></textarea>
+            <div>
+                <div class="flex" id="warning">
+                    <img src="./assets/caution.svg">
+                    <p>Apenas letras minusculas e sem acento</p>
+                </div>
+                <div class="flex" id="button_section">
+                    <button class="button" id="cript_button" title="criptografar">Criptografar</button>
+                    <button class="button" id="decript_button" title="descriptografar">Descriptografar</button>
+                </div>
+            </div>
+        </section>
+        <section class="flex" id="output">
+            <div class="flex" id="output_background">
+                <img id="no_input_img" src="./assets/no-input-img.svg">
+                <h2 class="title">Nenhuma mensagem encontrada</h2>
+                <p class="paragrafo">Digite um texto que você deseja criptografar ou descriptografar.</p>
+            </div>
+            <div class="flex fullcontent" id="history">
+                <div class="flex fullwidth" id="list"></div>
+                <button class="button" id="clean" title="Limpar">Limpar</button>
+            </div>
+        </section>
+        <script src="./script.js"></script>
+    </main>
+</body>
+
+</html>
