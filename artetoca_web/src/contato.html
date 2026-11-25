@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Contato</title>
+    <link rel="stylesheet" href="../css/contato.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:wght@300..800&display=swap" rel="stylesheet">
+</head>
+
+<body class="main_layout">
+    <div id="nav_bar"></div>
+    <main class="main_content contato">
+        <header class="header">
+            <h2>Entre em contato</h2>
+            <p class="gray_text_color">
+                Estamos aqui para responder suas dúvidas e receber suas sugestões
+            </p>
+        </header>
+        <form action="https://formspree.io/f/mojopdqj" method="POST" class="border_round">
+            <h2 class="cell full">Envie uma Mensagem</h2>
+            <label class="cell">
+                Nome
+                <input type="text" id="nome" name="Nome" class="form_input border_round" required>
+            </label>
+            <label class="cell">
+                Email
+                <input type="email" id="email" name="Email" class="form_input border_round" required>
+            </label>
+            <label class="cell full">
+                Assunto
+                <input type="text" id="assunto" name="Assunto" class="form_input border_round">
+            </label>
+            <label class="cell full">
+                Mensagem
+                <textarea id="message" name="Mensagem" class="form_input border_round" required></textarea>
+            </label>
+            <button type="submit">
+                <p>Enviar mensagem</p>
+            </button>
+        </form>
+        <div id="email_card" class="info_card border_round">
+            <div class="icon_bg">
+                <img class="icon" src="../assets/icons/e-mail.png" alt="">
+            </div>
+
+            <a href="mailto:seu-email@dominio.com?subject=Contato%20do%20Site">
+                <p>Email</p>
+                <p class="gray_text_color">aartetoca@gmail.com</p>
+            </a>
+        </div>
+        <div id="whatszap_card" class="info_card border_round">
+            <div class="icon_bg">
+                <img class="icon" src="../assets/icons/whatsapp.png" alt="">
+            </div>
+            <a href="https://wa.me/5585992001072?text=Olá,%20vim%20pelo%20site!" target="_blank">
+                <p>Whatsapp</p>
+                <p class="gray_text_color">(85) 992001072</p>
+            </a>
+        </div>
+        <div id="instagram_card" class="info_card border_round">
+            <div class="icon_bg">
+                <img class="icon" src="../assets/icons/instagram.png" alt="">
+            </div>
+            <a href="https://instagram.com/artetoca_ocara" target="_blank">
+                <p>Instagram</p>
+                <p class="gray_text_color">@artetoca_ocara</p>
+            </a>
+        </div>
+        <div id="address_card" class="info_card border_round">
+            <div class="icon_bg">
+                <img class="icon" src="../assets/icons/mapas_.png" alt="">
+            </div>
+            <a href="https://maps.app.goo.gl/sePDfc9qcdgETPyh9" target="_blank">
+                <p>Endereço</p>
+                <p class="gray_text_color">Arena Kactus - Ocara / CE</p>
+            </a>
+        </div>
+    </main>
+    <script src="../js/componentes/navbar.js"></script>
+</body>
+
+</html>

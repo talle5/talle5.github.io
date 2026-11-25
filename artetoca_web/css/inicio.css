@@ -1,0 +1,104 @@
+@import url('main.css');
+
+.card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+
+    div.icon {
+        background: #e9ebef;
+        width: 60px;
+        height: 60px;
+        border-radius: 20px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            height: 24px;
+            width: 24px;
+        }
+    }
+}
+
+.card_grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.about {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    ol {
+        display: grid;
+        list-style: none;
+        counter-reset: meu-contador;
+        padding-left: 0;
+        gap: 10px;
+
+        li {
+            counter-increment: meu-contador;
+            position: relative;
+            padding-left: 35px;
+            font-size: 1rem;
+            line-height: 30px;
+
+            &::before {
+                content: counter(meu-contador);
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 30px;
+                height: 30px;
+                background-color: #fef3c6;
+                color: #ba4d00;
+                font-weight: bold;
+                font-size: 0.9rem;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+
+.icon_bg {
+    width: 40px;
+    height: 40px;
+    border-radius: 14px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #dbeafe;
+}
+
+.mapa_header {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px;
+    gap: 16px;
+
+    .titulo {
+        font-size: larger;
+        font-weight: 500;
+    }
+}
+
+
+iframe {
+    width: 100%;
+    border-style: solid;
+    border-width: 1px 0px 0px 0px;
+    border-color: var(--border-color);
+}
