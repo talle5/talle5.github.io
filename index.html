@@ -1,20 +1,160 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio e monorepo de projetos de Talles: aplicações web, jogos em WebAssembly e projetos culturais.">
+    <title>Meus Projetos — Talles</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js" defer></script>
 </head>
 
 <body>
-    <h1>Meus projetos</h1>
-    <a href="https://talle5.github.io/Encriptador-de-texto/">Encriptador de texto</a>
-    <a href="https://talle5.github.io/SnakeGame/">SnakeGame</a>
-    <a href="https://talle5.github.io/artetoca_web/">Artetoca</a>
+    <div class="bg-glow" aria-hidden="true"></div>
+
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <a href="./" class="brand">
+                <span class="brand-dot" aria-hidden="true"></span>
+                <span>talle5</span>
+            </a>
+            <div class="topbar-actions">
+                <a href="https://github.com/talle5/talle5.github.io" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="Repositório no GitHub">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                    <span>GitHub</span>
+                </a>
+                <button id="theme-toggle" class="theme-btn" type="button" aria-label="Alternar tema claro/escuro" title="Alternar tema">
+                    <span class="theme-icon-sun" aria-hidden="true">☀️</span>
+                    <span class="theme-icon-moon" aria-hidden="true">🌙</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <span class="hero-badge">Monorepo &bull; GitHub Pages</span>
+            <h1>Olá! Estes são os <span class="gradient-text">meus projetos</span></h1>
+            <p class="hero-subtitle">
+                Uma coleção de experimentos e aplicações reunidos em um único lugar — de utilitários web e jogos em WebAssembly a sites institucionais.
+            </p>
+        </section>
+
+        <section class="projects-section" aria-label="Lista de projetos">
+            <div class="filter-bar" role="group" aria-label="Filtrar projetos por categoria">
+                <button class="filter-btn active" data-filter="all" type="button">Todos</button>
+                <button class="filter-btn" data-filter="web" type="button">Web</button>
+                <button class="filter-btn" data-filter="game" type="button">Jogos &amp; Wasm</button>
+            </div>
+
+            <div class="projects-grid">
+                <article class="card" data-category="web">
+                    <div class="card-banner banner-encrypt">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h2>Encriptador de Texto</h2>
+                            <span class="category-pill">Web App</span>
+                        </div>
+                        <p class="card-description">
+                            Decodificador interativo para criptografar e descriptografar mensagens em tempo real, com histórico de textos processados e cópia rápida.
+                        </p>
+                        <ul class="tech-list" aria-label="Tecnologias usadas">
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>JavaScript</li>
+                        </ul>
+                        <div class="card-actions">
+                            <a href="./Encriptador-de-texto/" class="btn-primary">
+                                Abrir projeto
+                                <span aria-hidden="true">&rarr;</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" data-category="game">
+                    <div class="card-banner banner-snake">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="2" y="6" width="20" height="12" rx="2"></rect>
+                            <path d="M6 12h4"></path>
+                            <path d="M8 10v4"></path>
+                            <circle cx="15" cy="11" r="1" fill="currentColor"></circle>
+                            <circle cx="17" cy="13" r="1" fill="currentColor"></circle>
+                        </svg>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h2>Snake Game</h2>
+                            <span class="category-pill">WebAssembly</span>
+                        </div>
+                        <p class="card-description">
+                            O clássico jogo da cobrinha desenvolvido em C/C++ com a biblioteca raylib e compilado via Emscripten para rodar direto no navegador.
+                        </p>
+                        <ul class="tech-list" aria-label="Tecnologias usadas">
+                            <li>C / C++</li>
+                            <li>raylib</li>
+                            <li>WebAssembly</li>
+                        </ul>
+                        <div class="card-actions">
+                            <a href="./SnakeGame/" class="btn-primary">
+                                Jogar agora
+                                <span aria-hidden="true">&rarr;</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" data-category="web">
+                    <div class="card-banner banner-artetoca">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle>
+                            <circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle>
+                            <circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle>
+                            <circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle>
+                            <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path>
+                        </svg>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-header">
+                            <h2>Artetoca</h2>
+                            <span class="category-pill">Site Institucional</span>
+                        </div>
+                        <p class="card-description">
+                            Portal da associação cultural Artetoca, valorizando artesãos e artistas da região de Cacoara com galeria, agenda de eventos, membros e contato.
+                        </p>
+                        <ul class="tech-list" aria-label="Tecnologias usadas">
+                            <li>HTML &amp; CSS</li>
+                            <li>JavaScript</li>
+                            <li>Firebase</li>
+                        </ul>
+                        <div class="card-actions">
+                            <a href="./artetoca_web/src/index.html" class="btn-primary">
+                                Visitar site
+                                <span aria-hidden="true">&rarr;</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p>Feito por <a href="https://github.com/talle5" target="_blank" rel="noopener noreferrer">talle5</a> &bull; Hospedado no GitHub Pages</p>
+        </div>
+    </footer>
 </body>
 
 </html>
